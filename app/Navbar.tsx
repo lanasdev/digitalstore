@@ -12,7 +12,7 @@ import NavbarProfile from "./NavbarProfile";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Login", href: "/api/auth/signin" },
-  { name: "Logout", href: "/api/auth/signin" },
+  { name: "Logout", href: "/api/auth/signout" },
   { name: "New Product", href: "/new" },
   { name: "Bought Products", href: "/bought" },
   { name: "Auth", href: "/auth" },
