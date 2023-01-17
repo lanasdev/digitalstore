@@ -12,6 +12,8 @@ const nextConfig = {
       "camo.githubusercontent.com",
       "avatars.githubusercontent.com",
       "i.scdn.co",
+      "upload.wikimedia.org",
+      "de.wikipedia.org",
     ],
   },
   // typescript: { ignoreBuildErrors: true },
