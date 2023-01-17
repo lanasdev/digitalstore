@@ -23,7 +23,7 @@ export default function RootLayout({
       <body>
         <AuthContext>
           <Navbar />
-          <main className="pt-24">{children}</main>
+          <main className="">{children}</main>
         </AuthContext>
       </body>
     </html>

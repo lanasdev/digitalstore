@@ -6,18 +6,22 @@ import Link from "next/link";
 import prisma from "lib/prisma";
 // import { Product } from "@prisma/client";
 // get the product type from the prisma client
-import { Product } from "@prisma/client";
+import { Product, Shop } from "@prisma/client";
 
 import ProductItem from "app/ProductItem";
+import Container from "./Container";
 
 async function getNewestProducts() {
-  const res = await prisma.product.findMany();
+  const res = await prisma.product.findMany({
+    take: 10,
+  });
+  console.log(res as Product[]);
 
   // Recommendation: handle errors
-  if (!res) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
+  // if (!res) {
+  //   // This will activate the closest `error.js` Error Boundary
+  //   throw new Error("Failed to fetch data");
+  // }
 
   return res;
 }
@@ -51,7 +55,7 @@ export default async function Home() {
   // }
 
   return (
-    <main className="container mx-auto">
+    <Container className="pt-24 min-h-screen pb-48">
       <h1 className="text-4xl font-bold  pb-24">
         {session ? `Hello ${session?.user?.name}!` : "Hello World"}
       </h1>
@@ -67,7 +71,7 @@ export default async function Home() {
               className="rounded-full object-cover pt-8"
             />
           )}
-          <pre>{JSON.stringify(session, null, 2)}</pre>
+          {/* <pre>{JSON.stringify(session, null, 2)}</pre> */}
         </div>
       ) : (
         <div className="flex gap-4">
@@ -87,6 +91,6 @@ export default async function Home() {
         </div>
         <pre className="pt-16">{JSON.stringify(data, null, 2)}</pre>
       </div>
-    </main>
+    </Container>
   );
 }

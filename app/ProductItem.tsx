@@ -19,7 +19,7 @@ export default function ProductItem({ product }: ProductItemProps) {
         alt={product.name}
         width={300}
         height={300}
-        className="rounded-lg object-cover w-full aspect-square "
+        className="rounded-t-lg object-cover w-full aspect-square "
       />
       <div className="p-4">
         <h3 className="text-xl text-slate-100 group-hover:underline font-bold pt-4">

@@ -13,8 +13,8 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "Login", href: "/api/auth/signin" },
   { name: "Logout", href: "/api/auth/signout" },
-  { name: "New Product", href: "/new" },
-  { name: "Bought Products", href: "/bought" },
+  // { name: "New Product", href: "/new" },
+  // { name: "Bought Products", href: "/bought" },
   { name: "Auth", href: "/auth" },
 ];
 
@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <Disclosure
       as="nav"
-      className="bg-slate-600/80 text-slate-100 sticky inset-x-8 top-12 z-50 mx-4 rounded-2xl backdrop-blur-lg "
+      className="bg-slate-600/80 text-slate-100 sticky inset-x-8 top-8 z-50 mx-4 rounded-2xl backdrop-blur-lg "
     >
       {({ open }) => (
         <>
