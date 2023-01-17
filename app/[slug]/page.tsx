@@ -18,7 +18,7 @@ export async function generateStaticParams() {
 }
 
 async function getStore({ slug }: { slug: string }) {
-  console.log("Slug: " + slug);
+  // console.log("Slug: " + slug);
 
   const res = await prisma.shop.findUnique({
     where: {
